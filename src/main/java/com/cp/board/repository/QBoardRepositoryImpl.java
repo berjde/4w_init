@@ -62,8 +62,6 @@ public class QBoardRepositoryImpl implements  QBoardRepository{
 
         JPAQuery<Board> query = jPAQueryFactory
                 .selectFrom(board)
-                .offset(pageRequest.getOffset())
-                .limit(pageRequest.getPageSize())
                 ;
 
         if(!Strings.isNullOrEmpty(searchDTO.getName())){
